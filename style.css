@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: #333;
+}
+
+.tabela-alunos {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.tabela-alunos th, .tabela-alunos td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.tabela-alunos th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.botao-azul {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.botao-azul:hover {
+    background-color: #0056b3;
+}

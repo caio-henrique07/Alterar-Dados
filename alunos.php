@@ -7,9 +7,9 @@
 </head>
 <body>
 
-    <h2 align="center">Lista de Alunos</h2>
+    <h2 class="titulo">Lista de Alunos</h2>
 
-    <table border="1" align="center" cellpadding="5" cellspacing="0">
+    <table class="tabela-alunos">
         <tr>
             <th>Nome</th>
             <th>Sexo</th>
@@ -17,6 +17,7 @@
             <th>Matrícula</th>
             <th>Email</th>
             <th>Turma</th>
+            <th></th>
         </tr>
 
         <?php
@@ -33,14 +34,11 @@
                 echo "<td>" . (!empty($linha['matricula']) ? $linha['matricula'] : '-') . "</td>";
                 echo "<td>{$linha['email']}</td>";
                 echo "<td>" . (!empty($linha['turma']) ? $linha['turma'] : '-') . "</td>";
+                echo "<td><a href='alterarAlunos.php?id={$linha['id']}' class='botao-azul'>Alterar</a></td>";
                 echo "</tr>";
             }
         ?>
     </table>
-
-    <div align="center" style="margin-top: 20px;">
-        <a href="alterarAlunos.php">Alterar</a>
-    </div>
 
 </body>
 </html>
