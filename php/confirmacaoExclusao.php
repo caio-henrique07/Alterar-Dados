@@ -22,9 +22,9 @@
 ?>
 
 <script>
-    if (confirm("Deseja realmente excluir o aluno '<?php echo addslashes($aluno['nome']); ?>'?")) {
-        window.location.href = "excluirAlunos.php?id=<?php echo $id; ?>";
+    if (confirm("Deseja realmente excluir o(a) aluno(a) '<?php echo addslashes($aluno['nome']); ?>'?")) {
+        window.location.href = "/php/excluirAlunos.php?id=<?php echo $id; ?>";
     } else {
-        window.location.href = "alunos.php";
+        window.location.href = "/php/alunos.php";
     }
 </script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Alunos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -35,13 +35,17 @@
                 echo "<td>{$linha['email']}</td>";
                 echo "<td>" . (!empty($linha['turma']) ? $linha['turma'] : '-') . "</td>";
                 echo "<td>
-                    <a href='alterarAlunos.php?id={$linha['id']}' class='botao-alterar'>Alterar</a>
-                    <a href='confirmacaoExclusao.php?id={$linha['id']}' class='botao-excluir'>Excluir</a>
+                    <a href='/php/alterarAlunos.php?id={$linha['id']}' class='botao-alterar'>Alterar</a>
+                    <a href='/php/confirmacaoExclusao.php?id={$linha['id']}' class='botao-excluir'>Excluir</a>
                 </td>";
                 echo "</tr>";
             }
         ?>
     </table>
+
+    <div class="botao-container">
+        <a href="/php/adicionarAlunos.php" class="botao-adicionar">Adicionar</a>
+    </div>
 
 </body>
 </html>

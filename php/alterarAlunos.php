@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8" />
     <title>Alterar Alunos</title>
-    <link rel="stylesheet" href="style-alterar.css">
+    <link rel="stylesheet" href="/css/style-form.css">
+    <link rel="stylesheet" href="/css/style-error.css">
 </head>
 <body>
     <?php
         include "util.php";
         $conn = conecta();
 
-        $id = $_GET['id'];
+        if (!isset($_GET['id']) || empty($_GET['id'])) {
+            echo '<div id="error-message">
+                    ID do aluno não informado.
+                    <br><br>
+                    <a href="alunos.php">Voltar para lista</a>
+                </div>';
+            exit;
+        }
+
+        $id = (int) $_GET['id'];
+
+        // Busca o aluno
         $sql = "SELECT * FROM alunos WHERE id = :id";
         $select = $conn->prepare($sql);
         $select->bindParam(':id', $id);
         $select->execute();
         $linha = $select->fetch(PDO::FETCH_ASSOC);
 
+        // Se não encontrou, mostra mensagem e sai
+        if (!$linha) {
+            echo '<div id="error-message">
+                    Aluno não encontrado.
+                    <br><br>
+                    <a href="alunos.php">Voltar para lista</a>
+                </div>';
+            exit;
+        }
+
+        // Se encontrou, pega os dados
         $nome = $linha['nome'];
         $sexo = $linha['sexo'];
         $celular = $linha['celular'];
@@ -63,7 +86,7 @@
 
             <input type="submit" value="Salvar Alterações" class="btn">
         </form>
-        <a href="alunos.php" class="link-voltar">Voltar para lista</a>
+        <a href="/php/alunos.php" class="link-voltar">Voltar para lista</a>
     </div>
 </body>
 </html>

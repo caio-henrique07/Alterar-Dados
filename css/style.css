@@ -28,9 +28,29 @@ body {
     font-weight: bold;
 }
 
-.botao-alterar, .botao-excluir {
+.botao-container{
+    text-align: left;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.botao-adicionar{
     display: inline-block;
-    padding: 8px 16px;
+    padding: 8px 18px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-adicionar:hover{
+    background-color: #357ab8;
+}
+
+.botao-alterar, .botao-excluir{
+    display: inline-block;
+    padding: 8px 18px;
     color: white;
     text-decoration: none;
     border-radius: 4px;
