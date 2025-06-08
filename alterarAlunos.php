@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <title>Alterar Aluno</title>
+    <title>Alterar Alunos</title>
     <link rel="stylesheet" href="style-alterar.css">
 </head>
 <body>

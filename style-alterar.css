@@ -60,6 +60,14 @@ input[type="text"], input[type="email"], select {
     background-color: #218838;
 }
 
+.mensagem-sucesso {
+    text-align: center;
+    font-weight: bold;
+    color: #28a745; /* verde sucesso */
+    margin-bottom: 15px;
+}
+
+
 .link-voltar {
     display: block;
     margin-top: 15px;

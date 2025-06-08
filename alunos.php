@@ -34,7 +34,10 @@
                 echo "<td>" . (!empty($linha['matricula']) ? $linha['matricula'] : '-') . "</td>";
                 echo "<td>{$linha['email']}</td>";
                 echo "<td>" . (!empty($linha['turma']) ? $linha['turma'] : '-') . "</td>";
-                echo "<td><a href='alterarAlunos.php?id={$linha['id']}' class='botao-azul'>Alterar</a></td>";
+                echo "<td>
+                    <a href='alterarAlunos.php?id={$linha['id']}' class='botao-alterar'>Alterar</a>
+                    <a href='confirmacaoExclusao.php?id={$linha['id']}' class='botao-excluir'>Excluir</a>
+                </td>";
                 echo "</tr>";
             }
         ?>
